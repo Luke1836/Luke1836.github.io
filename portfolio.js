@@ -129,7 +129,7 @@ class Effect
             this.mouse.pressed = false;
         });
 
-        window.addEventListener('touchmove', e=> {
+        /* window.addEventListener('touchmove', e=> {
             e.preventDefault();
             if (this.mouse.pressed) {
                 this.mouse.x = e.touches[0].clientX;
@@ -146,7 +146,7 @@ class Effect
 
         window.addEventListener('touchend', e => {
             this.mouse.pressed = false;
-        })
+        }) */
     }
 
     createParticles()
