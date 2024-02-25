@@ -97,7 +97,7 @@ class Effect
         this.width = this.canvas.width;
         this.height = this.canvas.height;
         this.particles = [];
-        this.numberOfParticles = 350;
+        this.numberOfParticles = 300;
         this.createParticles();
 
         this.mouse = 
@@ -128,6 +128,25 @@ class Effect
         window.addEventListener('mouseup', e => {
             this.mouse.pressed = false;
         });
+
+        window.addEventListener('touchmove', e=> {
+            e.preventDefault();
+            if (this.mouse.pressed) {
+                this.mouse.x = e.touches[0].clientX;
+                this.mouse.y = e.touches[0].clientY;
+            }
+        });
+
+        window.addEventListener('touchstart', e => {
+            e.preventDefault(); 
+            this.mouse.pressed = true;
+            this.mouse.x = e.touches[0].clientX;
+            this.mouse.y = e.touches[0].clientY;
+        });
+
+        window.addEventListener('touchend', e => {
+            this.mouse.pressed = false;
+        })
     }
 
     createParticles()
