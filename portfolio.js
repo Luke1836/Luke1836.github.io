@@ -212,3 +212,38 @@ function animate()
     requestAnimationFrame(animate);
 }
 animate();
+
+
+/* -----------TEXT ANIMATION----------- */
+const alpahbets = "ABCDEFGHIJKLMNOPQRSTUVWXY";
+let interval = null;
+const text = document.querySelectorAll('.anim');
+
+text.forEach(element => {
+    element.addEventListener('mouseover', event => {
+        let iteration = 0;
+        clearInterval(interval);
+
+        // Save the original text content
+        const originalText = event.target.dataset.value;
+
+        interval = setInterval(() => {
+            event.target.innerText = originalText
+                .split("")
+                .map((alphabet, index) => {
+                    if (index < iteration) {
+                        return originalText[index];
+                    }
+
+                    return alpahbets[Math.floor(Math.random() * 26)];
+                })
+                .join("");
+
+            if (iteration >= originalText.length) {
+                clearInterval(interval);
+            }
+
+            iteration += 1 / 3;
+        }, 20);
+    });
+});

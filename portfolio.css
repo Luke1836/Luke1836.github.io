@@ -119,6 +119,10 @@ html {
     }
 }
 
+.anim {
+    display: block;
+}
+
 @media screen and (max-width: 580px) {
     .slider {
         font-size: var(--fs-sm);
