@@ -25,6 +25,8 @@
     --hovereffect: #0b255972;
     --fs-sm: 1.75rem;
     --ff-header: "Space Mono", monospace;
+    --fs-heading: 4.5rem;
+    --fs-heading-sm: 2rem
 }
 
 /* GENERAL SYLES */
@@ -97,7 +99,16 @@ html {
     height: 100vh;
     position: relative;
     background-color: black;
-
+    color: var(--fontcolor-primary2);
+    font-size: var(--fs-heading);
+    font-family: var(--ff-header);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 2.1;
+    padding-left: 1.5rem;
+    display: flex;
+    align-items: center;
+    
     #background-2{
         width: 100%;
         height: 100%;
