@@ -1,5 +1,6 @@
 /* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 * {
     margin: 0;
@@ -23,6 +24,7 @@
     --bordercolor: #005272;
     --hovereffect: #0b255972;
     --fs-sm: 1.75rem;
+    --ff-header: "Space Mono", monospace;
 }
 
 /* GENERAL SYLES */
