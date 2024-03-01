@@ -66,6 +66,14 @@ html {
     filter: blur(6px) contrast(10);
 }
 
+.active {
+    visibility: visible;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
 /* END OF THE UTILITY CLASSES */
 
 .hero-container {
