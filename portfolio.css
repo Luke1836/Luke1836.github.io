@@ -25,7 +25,7 @@
     --hovereffect: #0b255972;
     --fs-sm: 1.75rem;
     --ff-header: "Space Mono", monospace;
-    --fs-heading: 4.5rem;
+    --fs-heading: 3.5rem;
     --fs-heading-sm: 1.5rem
 }
 
@@ -129,6 +129,13 @@ html {
 
 .anim, .anim1 {
     display: block;
+}
+
+.hero-2 {
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    background-image: linear-gradient(#f7e700 0% , #FFD93D 33% ,#454545 100%);
 }
 
 @media screen and (max-width: 580px) {
