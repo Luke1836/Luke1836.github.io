@@ -134,8 +134,21 @@ html {
 .hero-2 {
     width: 100%;
     height: 100vh;
-    padding: 100px;
-    background-image: linear-gradient(#f7e700 0% , #FFD93D 33% ,#454545 100%);
+    #header_svg {
+        overflow: hidden;
+        object-fit: cover;
+        width: 100%;
+        height: 100vh;
+    }
+
+    #header_svg::after {
+        content: "";
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        object-fit: cover;
+        background: rgba(0,0,0,0.25);
+    }
 }
 
 @media screen and (max-width: 580px) {
