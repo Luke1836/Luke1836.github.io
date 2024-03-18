@@ -173,9 +173,20 @@ html {
     z-index: 2;
 }
 
+.Skill-header {
+    color: var(--fontcolor-primary3);
+    position: absolute;
+    font-size: 2.5rem;
+    top: 4%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    z-index: 6;
+}
+
 .hero-2 {
     width: 100%;
     height: 100vh;
+    position: relative;
     #header_svg {
         overflow: hidden;
         object-fit: cover;
@@ -193,6 +204,11 @@ html {
         font-size: var(--fs-heading-sm);
         padding: 0.5rem;
     }
+
+    .Skill-header {
+        position: absolute;
+        top: 3.25%;
+    }
 }
 
 @media screen and (min-width: 581px) and (max-width: 768px) {
@@ -204,9 +220,14 @@ html {
         font-size: 2.25rem;
         padding: 0.75rem;
     }
+
+    .Skill-header {
+        position: absolute;
+        top: 3%;
+    }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media screen and (min-width: 769px) and (max-width: 1023px) {
     .slider {
         font-size: 2.75rem;
     }
@@ -214,6 +235,11 @@ html {
     .hero-1 {
         font-size: 2.75rem;
         padding: 1rem;
+    }
+
+    .Skill-header {
+        position: absolute;
+        top: 2.8%;
     }
 }
 
