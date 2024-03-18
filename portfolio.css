@@ -230,6 +230,10 @@ html {
         position: absolute;
         top: 3.25%;
     }
+
+    .anim, .anim1 {
+        border-bottom: 2px dotted var(--bordercolor);
+    }
 }
 
 @media screen and (min-width: 581px) and (max-width: 768px) {
@@ -246,6 +250,10 @@ html {
         position: absolute;
         top: 3%;
     }
+
+    .anim, .anim1 {
+        border-bottom: 2px dotted var(--bordercolor);
+    }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1023px) {
@@ -261,6 +269,10 @@ html {
     .Skill-header {
         position: absolute;
         top: 2.8%;
+    }
+
+    .anim, .anim1 {
+        border-bottom: 2px dotted var(--bordercolor);
     }
 }
 
