@@ -23,7 +23,7 @@
     --headerbgcolor: #0a1321;
     --bordercolor: #005272;
     --hovereffect: #0b255972;
-    --headercolor: linear-gradient(45deg, #FF204E, #A0153E, #5D0E41);
+    --headercolor: linear-gradient(45deg, #222831, #3b595b, #31363F);
     --fs-sm: 1.75rem;
     --ff-header: "Space Mono", monospace;
     --fs-heading: 3.5rem;
@@ -105,6 +105,7 @@ html {
     left: 50%;
     transform: translate(-50%, -50%);
     backdrop-filter: blur(10px);
+    opacity: 0.25;
     width: 264px;
     height: 64px;
     z-index: -1;
