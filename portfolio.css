@@ -75,12 +75,16 @@ html {
     visibility: hidden;
 }
 
+/* END OF THE UTILITY CLASSES */
+
+/* Section Animations */
+
 .intersect {
     opacity: 0;
     transform: translateX( -100%);
     backdrop-filter: blur(10px);
     filter: contrast(10) saturate(10);
-    transition: all 2s;
+    transition: all 1.5s;
 }
 
 .show-intersect {
@@ -90,7 +94,7 @@ html {
     backdrop-filter: blur(0px);
 }
 
-/* END OF THE UTILITY CLASSES */
+/* End of Section Animations */
 
 .hero-container {
     display: block;
