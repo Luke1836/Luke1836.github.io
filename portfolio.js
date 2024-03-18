@@ -220,7 +220,7 @@ let interval = null;
 const text = document.querySelectorAll('.anim');
 
 text.forEach(element => {
-    element.addEventListener('mouseover', event => {
+    element.addEventListener('mouseup', event => {
         let iteration = 0;
         clearInterval(interval);
 
@@ -247,3 +247,18 @@ text.forEach(element => {
         }, 20);
     });
 });
+
+
+/* ----------- Adding Section Animations -----------*/
+
+const intersect = document.querySelectorAll(".intersect");
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if(entry.isIntersecting)
+            entry.target.classList.add("show-intersect");
+        else
+        entry.target.classList.remove("show-intersect");
+    });
+});
+intersect.forEach((ele) => observer.observe(ele));

@@ -75,6 +75,21 @@ html {
     visibility: hidden;
 }
 
+.intersect {
+    opacity: 0;
+    transform: translateX( -100%);
+    backdrop-filter: blur(10px);
+    filter: contrast(10) saturate(10);
+    transition: all 2s;
+}
+
+.show-intersect {
+    opacity: 1;
+    transform: translateX(0%);
+    filter: contrast(1) saturate(1);
+    backdrop-filter: blur(0px);
+}
+
 /* END OF THE UTILITY CLASSES */
 
 .hero-container {
@@ -143,6 +158,7 @@ html {
 
 .anim, .anim1 {
     display: block;
+    border-bottom: 1px dotted var(--bordercolor);
 }
 
 #image-container {
