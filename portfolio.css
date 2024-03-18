@@ -50,6 +50,10 @@ html {
     border-radius: 15px;
 }
 
+abbr {
+    text-decoration: none;
+}
+
 /* UTILITY CLASSES */
 
 .nowrap {
