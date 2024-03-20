@@ -256,9 +256,13 @@ const intersect = document.querySelectorAll(".intersect");
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if(entry.isIntersecting)
+        {
             entry.target.classList.add("show-intersect");
+        }
         else
-        entry.target.classList.remove("show-intersect");
+        {
+            entry.target.classList.remove("show-intersect");
+        }
     });
 });
 intersect.forEach((ele) => observer.observe(ele));
