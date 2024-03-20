@@ -228,7 +228,7 @@ abbr {
 
 .skills {
     background-color: var(--box-color);
-    width: 300px;
+    width: 280px;
     height: 150px;
     border: 5px solid black;
 }
@@ -257,12 +257,27 @@ abbr {
 
     .Skill-header {
         position: absolute;
-        top: 3.25%;
+        top: 2.5%;
     }
 
     .anim, .anim1 {
         border-bottom: 2px dotted var(--bordercolor);
     }
+
+    .skill-div {
+        margin: 0;
+        width: 100%;
+    }
+
+    .skills {
+        width: 150px;
+        height: 100px;
+    }
+
+    #image-container::after {
+        height: 80px;
+    }
+
 }
 
 @media screen and (min-width: 581px) and (max-width: 768px) {
@@ -283,6 +298,17 @@ abbr {
     .anim, .anim1 {
         border-bottom: 2px dotted var(--bordercolor);
     }
+
+    .skill-div {
+        margin: 0;
+        width: 100%;
+    }
+
+    .skills {
+        width: 240px;
+        height: 150px;
+    }
+
 }
 
 @media screen and (min-width: 769px) and (max-width: 1023px) {
@@ -313,5 +339,33 @@ abbr {
     .hero-1 {
         font-size: 1.5rem;
         padding: 0.5rem;
+    }
+
+    .Skill-header {
+        position: absolute;
+        top: 6.5%;
+    }
+
+    .skill-div {
+        margin: 0;
+        width: 100%;
+    }
+
+    .skills {
+        width: 160px;
+        height: 80px;
+    }
+
+}
+
+@media screen and (max-height: 700px) and (max-width: 680px)  {
+    .skill-div {
+        margin: 0;
+        width: 100%;
+    }
+
+    .skills {
+        width: 140px;
+        height: 70px;
     }
 }
