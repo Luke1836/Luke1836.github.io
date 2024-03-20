@@ -99,16 +99,6 @@ abbr {
     backdrop-filter: blur(0px);
 }
 
-.skill-box-initial {
-    opacity: 0;
-    filter: saturate(10);
-}
-
-.skill-box-initial {
-    opacity: 1;
-    filter: saturate(1);
-}
-
 /* End of Section Animations */
 
 .hero-container {
