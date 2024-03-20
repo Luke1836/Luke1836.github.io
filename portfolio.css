@@ -231,6 +231,11 @@ abbr {
     width: 280px;
     height: 150px;
     border: 5px solid black;
+    display: grid;
+    place-content: center;
+    color: var(--fontcolor-primary3);
+    font-size: var(--fs-heading-sm);
+    text-align: center;
 }
 
 .hero-2 {
