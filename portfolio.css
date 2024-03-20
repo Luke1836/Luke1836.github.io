@@ -1,6 +1,7 @@
 /* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Euphoria+Script&family=Jacques+Francois+Shadow&family=Ranga:wght@400;700&display=swap');
 
 * {
     margin: 0;
@@ -202,12 +203,13 @@ abbr {
 .Skill-header {
     color: var(--fontcolor-primary3);
     position: absolute;
-    font-size: 2.5rem;
+    font-size: 3rem;
     top: 4%;
     left: 50%;
     transform: translate(-50%, 0%);
     z-index: 6;
     margin-bottom: 2rem;
+    font-family: "Euphoria Script", cursive;
 }
 
 .skill-div {
@@ -262,7 +264,7 @@ abbr {
 
     .Skill-header {
         position: absolute;
-        top: 2.5%;
+        top: 2.25%;
     }
 
     .anim, .anim1 {
