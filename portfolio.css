@@ -313,11 +313,15 @@ abbr, a {
         width: 100%;
         padding-left: 2rem;
         padding-top: 1rem;
-        color: var(--fontcolor-primary3);
+        color: var(--footerColor);
     }
-    
+
     .details a {
         color: var(--fontcolor-primary3);
+    }
+
+    .details a:hover {
+        color: var(--footerColor);
     }
 
     .accounts {
