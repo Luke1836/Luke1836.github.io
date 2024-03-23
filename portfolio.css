@@ -51,7 +51,7 @@ html {
     border-radius: 15px;
 }
 
-abbr {
+abbr, a {
     text-decoration: none;
 }
 
@@ -307,6 +307,15 @@ abbr {
         font-size: var(--fs-sm);
         padding: 1rem;
     }
+}
+
+.details {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 2rem;
 }
 
 @media screen and (max-width: 580px) {
