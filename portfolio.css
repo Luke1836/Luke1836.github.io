@@ -229,15 +229,40 @@ abbr {
 }
 
 .skills {
-    background-color: var(--box-color);
     width: 280px;
     height: 150px;
+    background: repeating-conic-gradient(from var(--a), #ff2770 0%, #ff2770 5%, transparent 5%, transparent 40%, #ff2770 50%);
+    animation: animate 4s linear infinite;
     border: 5px solid black;
     display: grid;
     place-content: center;
     color: var(--fontcolor-primary3);
     font-size: var(--fs-heading-sm);
     text-align: center;
+}
+
+.skills::before {
+    content: '';
+    position: absolute;
+    width: 280px;
+    height: 150px;
+    background: repeating-conic-gradient();
+}
+
+@property --a {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
+@keyframes animate{
+    0% {
+        --a: 0deg;
+    }
+
+    100% {
+        --a: 360deg;
+    }
 }
 
 .hero-2 {
@@ -294,6 +319,11 @@ abbr {
         height: 100px;
     }
 
+    .skills::before {
+        width: 150px;
+        height: 100px;
+    }
+
     #image-container::after {
         height: 80px;
     }
@@ -325,6 +355,11 @@ abbr {
     }
 
     .skills {
+        width: 240px;
+        height: 150px;
+    }
+
+    .skills::before {
         width: 240px;
         height: 150px;
     }
@@ -376,6 +411,11 @@ abbr {
         height: 80px;
     }
 
+    .skills::before {
+        width: 160px;
+        height: 80px;
+    }
+
 }
 
 @media screen and (max-height: 700px) and (max-width: 680px)  {
@@ -385,6 +425,11 @@ abbr {
     }
 
     .skills {
+        width: 140px;
+        height: 70px;
+    }
+
+    .skills::before {
         width: 140px;
         height: 70px;
     }
