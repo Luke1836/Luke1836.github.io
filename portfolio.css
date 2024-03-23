@@ -239,14 +239,28 @@ abbr {
     color: var(--fontcolor-primary3);
     font-size: var(--fs-heading-sm);
     text-align: center;
+    border-radius: 20px;
+    position: relative;
 }
 
 .skills::before {
     content: '';
     position: absolute;
-    width: 280px;
-    height: 150px;
-    background: repeating-conic-gradient();
+    width: 270px;
+    height: 140px;
+    border-radius: 20px;
+    background: repeating-conic-gradient(from var(--a), #45f3ff 0%, #45f3ff 5%, transparent 5%, transparent 40%, #45f3ff 50%);
+    animation: animate 4s linear infinite;
+    animation-delay: -1s;
+}
+
+.skills::after {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    background: var(--box-color);
+    border-radius: 15px;
+    border: 6px solid black;
 }
 
 @property --a {
