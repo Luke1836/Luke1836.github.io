@@ -1,13 +1,6 @@
 /* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url("https://www.fontspace.com/weddingday-font-f89130");
-@font-face {
-    font-family: 'Weddingday';
-    src: url('../Weddingday Personal Use.woff2') format('woff2'),
-         url('../Weddingday Personal Use.woff') format('woff');
-    /* You can also specify font-weight and font-style if needed */
-}
 
 * {
     margin: 0;
@@ -35,7 +28,7 @@
     --ff-header: "Space Mono", monospace;
     --fs-heading: 3.5rem;
     --fs-heading-sm: 1.5rem;
-    --box-color: black;
+    --box-color: #2d2d39;
 }
 
 /* GENERAL SYLES */
