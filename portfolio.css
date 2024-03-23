@@ -300,22 +300,37 @@ abbr, a {
     width: 100%;
     height: 40vh;
     color: var(--footerColor);
+    position: relative;
 
     .description {
         text-align: center;
         text-transform: capitalize;
-        font-size: var(--fs-sm);
+        font-size: 2rem;
         padding: 1rem;
     }
-}
 
-.details {
-    width: 100%;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: flex-start;
-    padding-left: 2rem;
+    .details {
+        width: 100%;
+        padding-left: 2rem;
+        padding-top: 1rem;
+    }
+    
+    .details a {
+        color: var(--fontcolor-primary3);
+    }
+
+    .accounts {
+        font-size: 1.2rem;
+        display: block;
+        padding: 0.5rem;
+    }
+    
+    .ending {
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 580px) {
@@ -355,6 +370,11 @@ abbr, a {
         height: 80px;
     }
 
+    .details {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 1rem;
+    }
 }
 
 @media screen and (min-width: 581px) and (max-width: 768px) {
@@ -385,6 +405,12 @@ abbr, a {
         width: 240px;
         height: 150px;
     }
+
+    .details {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 1rem;
+    }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1023px) {
@@ -404,6 +430,12 @@ abbr, a {
 
     .anim, .anim1 {
         border-bottom: 2px dotted var(--bordercolor);
+    }
+
+    .details {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 1rem;
     }
 }
 
@@ -442,5 +474,11 @@ abbr, a {
     .skills {
         width: 150px;
         height: 120px;
+    }
+
+    .details {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 1rem;
     }
 }
