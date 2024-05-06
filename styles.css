@@ -532,6 +532,14 @@ abbr, a {
         width: 160px;
         height: 80px;
     }
+
+    .hero-container {
+        .container {
+            position: absolute;
+            top: 5%;
+            left: 58%;
+        }
+    }
 }
 
 @media screen and (max-height: 700px) and (max-width: 680px)  {
@@ -559,7 +567,7 @@ abbr, a {
         .container {
             position: absolute;
             top: 3%;
-            left: 6%;
+            left: 5%;
         }
     }
 }
