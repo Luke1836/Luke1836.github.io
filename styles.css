@@ -114,7 +114,7 @@ abbr, a {
     .container {
         position: absolute;
         top: 6%;
-        left: 74%;
+        left: 80%;
     }
 
     .inner {
@@ -130,7 +130,7 @@ abbr, a {
         filter: none;
         transition: clip-path 0.5s ease-in-out;
         border-radius: 20px;
-        
+
         span {
             position: absolute;
             top: 13.5%;
@@ -417,6 +417,20 @@ abbr, a {
         flex-flow: column nowrap;
         gap: 1rem;
     }
+
+    .container {
+        position: absolute;
+        top: 16%;
+        left: 60%;
+    }
+
+    .footer {
+        
+        .ending {
+            width: 90%;
+            padding-left: 1rem;
+        }
+    }
 }
 
 @media screen and (min-width: 581px) and (max-width: 768px) {
@@ -522,5 +536,9 @@ abbr, a {
         display: flex;
         flex-flow: column nowrap;
         gap: 1rem;
+    }
+
+    .footer {
+        height: 50vh;
     }
 }
