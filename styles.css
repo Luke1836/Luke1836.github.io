@@ -22,7 +22,7 @@
     --fontcolor-primary3: #EEE;
     --headerbgcolor: #0a1321;
     --bordercolor: #005272;
-    --hovereffect: #0b255972;
+    --hovereffect: #1d029272;
     --headercolor: linear-gradient(45deg, #222831, #3b595b, #31363F);
     --fs-sm: 1.75rem;
     --ff-header: "Space Mono", monospace;
@@ -110,8 +110,28 @@ abbr, a {
     width: 100%;
     height: 100%;
 
+    .container {
+        position: absolute;
+        top: 5%;
+        left: 78%;
+    }
+
     .inner {
-        width: ;
+        z-index: 1000;
+        color: var(--fontcolor-primary2);
+        background-color: var(--hovereffect);
+        width: 300px;
+        height: auto;
+        padding: 2rem;
+        position: relative;
+        clip-path: circle(10% at 90.5% 19.5%);
+        opacity: 1;
+        filter: none;
+        span {
+            position: absolute;
+            top:9.5%;
+            left: 89.5%;
+        }
     }
 }
 
