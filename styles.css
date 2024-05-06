@@ -428,6 +428,16 @@ abbr, a {
     }
 }
 
+@media screen and (min-width: 440px) and (max-width: 580px) {
+    .hero-container {
+        .container {
+            position: absolute;
+            top: 5%;
+            left: 35%;
+        }
+    }
+}
+
 @media screen and (min-width: 581px) and (max-width: 768px) {
     .slider {
         font-size: 2.5rem;
@@ -461,6 +471,14 @@ abbr, a {
         display: flex;
         flex-flow: column nowrap;
         gap: 1rem;
+    }
+
+    .hero-container {
+        .container {
+            position: absolute;
+            top: 5%;
+            left: 45%;
+        }
     }
 }
 
