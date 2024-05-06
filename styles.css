@@ -113,26 +113,37 @@ abbr, a {
 
     .container {
         position: absolute;
-        top: 5%;
-        left: 78%;
+        top: 6%;
+        left: 74%;
     }
 
     .inner {
         z-index: 1000;
         color: var(--fontcolor-primary2);
         background-color: var(--fontcolor-primary4);
-        width: 300px;
+        width: 350px;
         height: auto;
         padding: 2rem;
         position: relative;
-        clip-path: circle(10% at 90.5% 19.5%);
+        clip-path: circle(8% at 90.5% 22.5%);
         opacity: 1;
         filter: none;
+        transition: clip-path 0.5s ease-in-out;
+        border-radius: 20px;
         
         span {
             position: absolute;
-            top:9.5%;
+            top: 13.5%;
             left: 89.5%;
+        }
+    }
+
+    .inner:hover {
+        background-color: var(--box-color);
+        clip-path: circle(80%);
+
+        span {
+            display: none;
         }
     }
 }
