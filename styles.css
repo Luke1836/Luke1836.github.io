@@ -119,7 +119,7 @@ abbr, a {
 
     .inner {
         z-index: 1000;
-        color: var(--fontcolor-primary2);
+        color: var(--fontcolor-primary4);
         background-color: var(--fontcolor-primary4);
         width: 350px;
         height: auto;
@@ -141,6 +141,7 @@ abbr, a {
     .inner:hover {
         background-color: var(--box-color);
         clip-path: circle(80%);
+        color: var(--fontcolor-primary2);
 
         span {
             display: none;
@@ -418,17 +419,11 @@ abbr, a {
         gap: 1rem;
     }
 
-    .container {
-        position: absolute;
-        top: 16%;
-        left: 60%;
-    }
-
-    .footer {
-        
-        .ending {
-            width: 90%;
-            padding-left: 1rem;
+    .hero-container {
+        .container {
+            position: absolute;
+            top: 5%;
+            left: 10%;
         }
     }
 }
@@ -540,5 +535,13 @@ abbr, a {
 
     .footer {
         height: 50vh;
+    }
+
+    .hero-container {
+        .container {
+            position: absolute;
+            top: 3%;
+            left: 6%;
+        }
     }
 }
