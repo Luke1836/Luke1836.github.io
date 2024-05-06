@@ -506,6 +506,28 @@ abbr, a {
         flex-flow: column nowrap;
         gap: 1rem;
     }
+
+    .hero-container {
+        .container {
+            position: absolute;
+            top: 5%;
+            left: 55%;
+        }
+    }
+
+    .footer {
+        height: 30vh;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1500px) {
+    .hero-container {
+        .container {
+            position: absolute;
+            top: 5%;
+            left: 70%;
+        }
+    }
 }
 
 @media screen and (max-height: 480px) {
