@@ -19,10 +19,11 @@
     --bgcolor: black;
     --fontcolor-primary1: #9BF2EA;
     --fontcolor-primary2: #0FC2C0;
+    --fontcolor-primary4: #008684;
     --fontcolor-primary3: #EEE;
     --headerbgcolor: #0a1321;
     --bordercolor: #005272;
-    --hovereffect: #1d029272;
+    --hovereffect: #2300c072;
     --headercolor: linear-gradient(45deg, #222831, #3b595b, #31363F);
     --fs-sm: 1.75rem;
     --ff-header: "Space Mono", monospace;
@@ -119,7 +120,7 @@ abbr, a {
     .inner {
         z-index: 1000;
         color: var(--fontcolor-primary2);
-        background-color: var(--hovereffect);
+        background-color: var(--fontcolor-primary4);
         width: 300px;
         height: auto;
         padding: 2rem;
@@ -127,6 +128,7 @@ abbr, a {
         clip-path: circle(10% at 90.5% 19.5%);
         opacity: 1;
         filter: none;
+        
         span {
             position: absolute;
             top:9.5%;
