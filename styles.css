@@ -492,6 +492,10 @@ abbr, a {
             padding-left: 1rem;
         }
     }
+
+    .footer {
+        height: 30vh;
+    }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1023px) {
@@ -529,6 +533,16 @@ abbr, a {
 
     .footer {
         height: 30vh;
+    }
+}
+
+@media screen and (min-height: 1000px) {
+    .footer {
+        height: 25vh;
+    }
+
+    .Skill-header {
+        top: 2.4%;
     }
 }
 
@@ -594,7 +608,7 @@ abbr, a {
     }
 
     .footer {
-        height: 50vh;
+        height: 35vh;
     }
 
     .hero-container {
