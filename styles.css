@@ -429,17 +429,21 @@ abbr, a {
         header {
             width: 100%;
             padding-top: 1.25rem;
-            padding-left: 0.75  rem;
+            padding-left: 0.75rem;
+        }
+
+        .inner {
+            font-size: 1rem;
         }
     }
 }
 
 @media screen and (min-width: 440px) and (max-width: 580px) {
     .hero-container {
-        .container {
-            position: absolute;
-            top: 5%;
-            left: 35%;
+        header {
+            width: 100%;
+            padding-top: 1.25rem;
+            padding-left: 1rem;
         }
     }
 }
@@ -480,10 +484,10 @@ abbr, a {
     }
 
     .hero-container {
-        .container {
-            position: absolute;
-            top: 5%;
-            left: 45%;
+        header {
+            width: 100%;
+            padding-top: 1.25rem;
+            padding-left: 1rem;
         }
     }
 }
@@ -592,10 +596,10 @@ abbr, a {
     }
 
     .hero-container {
-        .container {
-            position: absolute;
-            top: 3%;
-            left: 5%;
+        header {
+            width: 100%;
+            padding-top: 1.25rem;
+            padding-left: 1rem;
         }
     }
 }
