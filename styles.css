@@ -518,10 +518,10 @@ abbr, a {
     }
 
     .hero-container {
-        .container {
-            position: absolute;
-            top: 5%;
-            left: 55%;
+        header {
+            width: 100%;
+            padding-top: 1.5rem;
+            padding-left: 1.25rem;
         }
     }
 
@@ -532,10 +532,10 @@ abbr, a {
 
 @media screen and (min-width: 1024px) and (max-width: 1500px) {
     .hero-container {
-        .container {
-            position: absolute;
-            top: 5%;
-            left: 70%;
+        header {
+            width: 100%;
+            padding-top: 1.5rem;
+            padding-left: 1.25rem;
         }
     }
 }
@@ -566,10 +566,10 @@ abbr, a {
     }
 
     .hero-container {
-        .container {
-            position: absolute;
-            top: 5%;
-            left: 58%;
+        header {
+            width: 100%;
+            padding-top: 1.5rem;
+            padding-left: 1.25rem;
         }
     }
 }
