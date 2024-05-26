@@ -274,7 +274,7 @@ abbr, a {
 }
 
 .skills {
-    width: 280px;
+    width: 250px;
     height: 150px;
     background: repeating-conic-gradient(from var(--a), #ff2770 0%, #ff2770 5%, transparent 5%, transparent 40%, #ff2770 50%);
     animation: animate 4s linear infinite;
