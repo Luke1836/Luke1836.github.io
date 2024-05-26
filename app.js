@@ -7,25 +7,32 @@ ctx.lineWidth = 2;
 
 /*  ------------Adding Linear Gradients--------------  */
 
+/* const centerX = canvas.width / 2;
+const centerY = canvas.height / 2;
+const startRadius = 0;
+const endRadius = Math.min(centerX, centerY);
+
+const gradient = ctx.createRadialGradient(centerX, centerY, startRadius, centerX, centerY, endRadius); */
+
 const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
-gradient.addColorStop(0, '#43766C');
-gradient.addColorStop(0.5, 'cyan');
-gradient.addColorStop(1, '#D63484');
+gradient.addColorStop(0, '#7469B6');
+gradient.addColorStop(0.4, '#874CCC');
+gradient.addColorStop(1, '#C40C0C');
 
 class Particles
 {
     constructor(effect)
     {
         this.effect = effect;
-        this.radius = Math.random() * 12 + 2;
+        this.radius = Math.random() * 100 + 2;
         this.x = this.radius + Math.random() * (this.effect.width - 2 * this.radius);
         this.y = this.radius + Math.random() * (this.effect.height -2 * this.radius);
-        this.vx = Math.random() * 2 - 2;
-        this.vy = Math.random() * 2 - 2;
+        this.vx = Math.random() * 0.7 - 0.5;
+        this.vy = Math.random() * 0.7 - 0.5;
         this.pushX = 0;
         this.pushY = 0;
-        this.friction = 0.90;
-        this.frictionY = 0.5;
+        this.friction = 0.80;
+        this.frictionY = 0.4;
     }
 
     draw(context)
@@ -97,7 +104,7 @@ class Effect
         this.width = this.canvas.width;
         this.height = this.canvas.height;
         this.particles = [];
-        this.numberOfParticles = 300;
+        this.numberOfParticles = 80;
         this.createParticles();
 
         this.mouse = 

@@ -70,7 +70,7 @@ abbr, a {
     background-color: var(--bgcolor);
     width: 100%;
     height: 100%;
-    filter: blur(6px) contrast(10);
+    filter: blur(20px) contrast(20);
 }
 
 .active {
@@ -438,6 +438,10 @@ abbr, a {
             font-size: 1rem;
         }
     }
+
+    #canvas1 {
+        filter: blur(40px) contrast(20);
+    }
 }
 
 @media screen and (min-width: 440px) and (max-width: 580px) {
@@ -447,6 +451,10 @@ abbr, a {
             padding-top: 1.25rem;
             padding-left: 1rem;
         }
+    }
+
+    #canvas1 {
+        filter: blur(10px) contrast(20);
     }
 }
 
