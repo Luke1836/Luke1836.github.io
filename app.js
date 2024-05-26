@@ -24,7 +24,7 @@ class Particles
     constructor(effect)
     {
         this.effect = effect;
-        this.radius = Math.random() * 100 + 2;
+        this.radius = Math.random() * 60 + 2;
         this.x = this.radius + Math.random() * (this.effect.width - 2 * this.radius);
         this.y = this.radius + Math.random() * (this.effect.height -2 * this.radius);
         this.vx = Math.random() * 0.7 - 0.5;
@@ -104,7 +104,7 @@ class Effect
         this.width = this.canvas.width;
         this.height = this.canvas.height;
         this.particles = [];
-        this.numberOfParticles = 80;
+        this.numberOfParticles = 100;
         this.createParticles();
 
         this.mouse = 
