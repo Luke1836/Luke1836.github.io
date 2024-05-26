@@ -22,7 +22,7 @@
     --fontcolor-primary4: #008684;
     --fontcolor-primary3: #EEE;
     --headerbgcolor: #0a1321;
-    --bordercolor: #005272;
+    --bordercolor: #08161b69;
     --hovereffect: #2300c072;
     --headercolor: linear-gradient(45deg, #222831, #3b595b, #31363F);
     --fs-sm: 1.75rem;
@@ -420,8 +420,10 @@ abbr, a {
     
     .blur-div {
         width: 300px;
-        height: 50vh;
-        transform: translate(-50%, -50%) skew(-10deg, -5deg);
+        height: 45vh;
+        transform: translate(-50%, -50%) skew(-12deg, -5deg);
+        border: 2px solid var(--bordercolor);
+        border-radius: 10px;
     }
 
     #image-container::after {
