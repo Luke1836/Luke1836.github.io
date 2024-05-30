@@ -105,7 +105,7 @@ class Effect
         this.height = this.canvas.height;
         this.particles = [];
         if(window.innerWidth <= 700)
-            this.numberOfParticles = 70;
+            this.numberOfParticles = 80;
         else 
             this.numberOfParticles = 100;
         this.createParticles();
