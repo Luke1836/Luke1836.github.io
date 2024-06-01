@@ -103,10 +103,13 @@ abbr, a {
 
 /* End of Section Animations */
 
+
 /* Preloder */
 .preloader {
     visibility: visible;
 }
+
+/* End of Preloader styling*/
 
 
 .hero-container {
