@@ -249,7 +249,7 @@ abbr, a {
 #image-container::before {
     content: "";
     position: absolute;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     background-color: rgba(30, 30, 30, 0.15);
     z-index: 2;
@@ -340,6 +340,13 @@ abbr, a {
 }
 
 .hero-2 {
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    .image-container {
+        width: 100%;
+        height: auto;
+    }
     width: 100%;
     min-height: fit-content;
     position: relative;
@@ -623,11 +630,12 @@ abbr, a {
     .skill-div {
         margin: 0;
         width: 100%;
+        font-size: 0.25rem;
     }
 
     .skills {
-        width: 150px;
-        height: 120px;
+        width: 120px;
+        height: 80px;
     }
 
     .details {
