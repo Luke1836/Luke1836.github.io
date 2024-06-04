@@ -277,3 +277,6 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 intersect.forEach((ele) => observer.observe(ele));
+
+
+/* ----------- Adding Section Animations -----------*/

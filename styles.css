@@ -107,6 +107,15 @@ abbr, a {
 /* Preloder */
 .preloader {
     visibility: visible;
+    width: 100%;
+    min-height: 100vh;
+    background-color: white;
+    z-index: 10000;
+    position: absolute;
+}
+
+.hide-preloader {
+    visibility: hidden;
 }
 
 /* End of Preloader styling*/
