@@ -116,6 +116,7 @@ abbr, a {
 
 .hide-preloader {
     visibility: hidden;
+    z-index: -10000;
 }
 
 /* End of Preloader styling*/

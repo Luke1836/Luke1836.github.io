@@ -280,3 +280,7 @@ intersect.forEach((ele) => observer.observe(ele));
 
 
 /* ----------- Adding Section Animations -----------*/
+const preloader = document.querySelector('.preloader')
+window.addEventListener('load', () => {
+    preloader.classList.add('hide-preloader')
+})
