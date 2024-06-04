@@ -104,10 +104,10 @@ class Effect
         this.width = this.canvas.width;
         this.height = this.canvas.height;
         this.particles = [];
-        if(window.innerWidth <= 700)
-            this.numberOfParticles = 80;
+        if(window.innerWidth <= 750)
+            this.numberOfParticles = 100;
         else 
-            this.numberOfParticles = 125;
+            this.numberOfParticles = 160;
         this.createParticles();
 
         this.mouse = 
