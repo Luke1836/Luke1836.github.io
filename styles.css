@@ -186,6 +186,19 @@ abbr, a {
     transform: translate(-50%, -50%);
     backdrop-filter: blur(10px);
     z-index: 12;
+
+    .main-name {
+        text-shadow:
+            2px 2px 0 #000,
+            -2px -2px 0 #000,
+            2px -2px 0 #000,
+            -2px 2px 0 #000,
+            0 2px 0 #000,
+            2px 0 0 #000,
+            0 -2px 0 #000,
+            -2px 0 0 #000,
+            2px 2px 5px #000;
+    }
 }
 
 .blur-div {
