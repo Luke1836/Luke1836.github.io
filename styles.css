@@ -199,6 +199,19 @@ abbr, a {
             -2px 0 0 #000,
             2px 2px 5px #000;
     }
+
+    .domain-name {
+        text-shadow: 
+            1px 1px 0 #00504e,
+            -1px -1px 0 #00504e,
+            2px -2px 0 #00504e,
+            -1px 2px 0 #00504e,
+            0px 1px 0 #00504e,
+            1px 0 0 #00504e,
+            0 -1px 0 #00504e,
+            -1px 0 0 #00504e,
+            3px 3px 6px #00504e;
+    }
 }
 
 .blur-div {
