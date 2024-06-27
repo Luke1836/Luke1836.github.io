@@ -19,6 +19,7 @@
     --padding: 1rem;
     --footerColor:#048b8b;
     --bgcolor: black;
+    --bgcolor-contrast: #333;
     --fontcolor-primary1: #9BF2EA;
     --fontcolor-primary2: #0FC2C0;
     --fontcolor-primary4: #008684;
@@ -292,7 +293,10 @@ abbr, a {
     }
 
     .projects-container {
-
+        width: 70%;
+        background-color: var(--bgcolor-contrast);
+        filter: contrast(4);
+        color: white;
     }
 }
 
