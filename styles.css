@@ -545,6 +545,15 @@ abbr, a {
         }
     }
 
+    .hero-projects {
+        flex-flow: column nowrap;
+
+        .project-header {
+            padding: 2rem;
+            width: 100%;
+        }
+    }
+
     #canvas1 {
         filter: blur(40px) contrast(20);
     }
@@ -561,6 +570,15 @@ abbr, a {
 
     #canvas1 {
         filter: blur(10px) contrast(20);
+    }
+
+    .hero-projects {
+        flex-flow: column nowrap;
+
+        .project-header {
+            padding: 2rem;
+            width: 100%;
+        }
     }
 }
 
@@ -599,6 +617,15 @@ abbr, a {
         gap: 1rem;
     }
 
+    .hero-projects {
+        flex-flow: column nowrap;
+
+        .project-header {
+            padding: 2rem;
+            width: 100%;
+        }
+    }
+    
     .hero-container {
         header {
             width: 100%;
