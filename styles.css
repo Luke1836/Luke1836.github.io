@@ -25,6 +25,7 @@
     --bordercolor2: #08161b69;
     --bordercolor: #006597;
     --hovereffect: #2300c072;
+    --project-heading-color: #38f79b72;
     --headercolor: linear-gradient(45deg, #222831, #3b595b, #31363F);
     --fs-sm: 1.75rem;
     --ff-header: "Space Mono", monospace;
@@ -260,6 +261,15 @@ abbr, a {
 
 .hero-projects {
     min-height: 100vh;
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+
+    .project-header {
+        width: 30%;
+        background-color: var(--project-heading-color);
+    }
 }
 
 .anim, .anim1 {
