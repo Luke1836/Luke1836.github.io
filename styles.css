@@ -258,6 +258,10 @@ abbr, a {
     }
 }
 
+.hero-projects {
+    min-height: 100vh;
+}
+
 .anim, .anim1 {
     display: block;
     border-bottom: 2px dotted var(--bordercolor);
