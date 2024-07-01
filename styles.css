@@ -593,6 +593,15 @@ abbr, a {
         }
     }
 
+    .hero-skills {
+        flex-flow: column nowrap;
+
+        .skills-header {
+            padding: 2rem;
+            width: 100%;
+        }
+    }
+
     #canvas1 {
         filter: blur(40px) contrast(20);
     }
@@ -615,6 +624,15 @@ abbr, a {
         flex-flow: column nowrap;
 
         .project-header {
+            padding: 2rem;
+            width: 100%;
+        }
+    }
+
+    .hero-skills {
+        flex-flow: column nowrap;
+
+        .skills-header {
             padding: 2rem;
             width: 100%;
         }
@@ -660,6 +678,15 @@ abbr, a {
         flex-flow: column nowrap;
 
         .project-header {
+            padding: 2rem;
+            width: 100%;
+        }
+    }
+
+    .hero-skills {
+        flex-flow: column nowrap;
+
+        .skills-header {
             padding: 2rem;
             width: 100%;
         }
