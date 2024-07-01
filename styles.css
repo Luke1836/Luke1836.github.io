@@ -317,7 +317,7 @@ abbr, a {
         font-size: 3rem;
         color: var(--fontcolor-primary3);
         
-        .project-span-heading {
+        .skills-span-heading {
             text-shadow:
                 2px 2px 0 #000,
                 -2px -2px 0 #000,
