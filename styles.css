@@ -93,15 +93,13 @@ abbr, a {
 
 .intersect {
     opacity: 0;
-    transform: translateX( -100%);
     backdrop-filter: blur(10px);
     filter: contrast(10) saturate(10);
-    transition: all 1.5s;
+    transition: all 1.75s;
 }
 
 .show-intersect {
     opacity: 1;
-    transform: translateX(0%);
     filter: contrast(1) saturate(1);
     backdrop-filter: blur(0px);
 }

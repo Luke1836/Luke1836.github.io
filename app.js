@@ -279,7 +279,7 @@ const observer = new IntersectionObserver((entries) => {
 intersect.forEach((ele) => observer.observe(ele));
 
 
-/* ----------- Adding Section Animations -----------*/
+/* ----------- Adding Preloader Animations -----------*/
 const preloader = document.querySelector('.preloader')
 window.addEventListener('load', () => {
     preloader.classList.add('hide-preloader')
