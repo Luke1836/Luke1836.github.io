@@ -342,6 +342,36 @@ abbr, a {
     border-bottom: 2px dotted var(--bordercolor);
 }
 
+.anim1 {
+    animation: surprise 3s ease-in-out 0s infinite forwards;
+}
+
+@keyframes surprise {
+    0% {
+        color: #7469B6;
+    }
+
+    20% {
+        color: #874CCC;
+    }
+
+    40% {
+        color: #C40C0C;
+    }
+
+    60% {
+        color: #00504e;
+    }
+
+    80% {
+        color: #38f79b72;
+    }
+
+    100% {
+        color: #00c0bd72;
+    }
+}
+
 #image-container {
     height: 100vh;
     width: 100%;
