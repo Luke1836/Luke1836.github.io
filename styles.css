@@ -469,6 +469,30 @@ abbr, a {
     z-index: 10;
 }
 
+.hero-projects .projects-container .hardware-projects {
+    height: calc(100% / 3);
+    background: dodgerblue;
+}
+
+.hero-projects .projects-container .web-projects {
+    height: calc(100% / 3);
+    background: crimson;
+}
+
+.hero-projects .projects-container .dataAnalytics-projects {
+    height: calc(100% / 3);
+    background: violet;
+}
+
+.hero-skills .skills-container .technical-skills {
+    height: calc(100% / 2);
+    background: dodgerblue;
+}
+.hero-skills .skills-container .nonTechnical-skills {
+    height: calc(100% / 2);
+    background: crimson;
+}
+
 @property --a {
     syntax: '<angle>';
     inherits: false;

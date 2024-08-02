@@ -284,3 +284,10 @@ const preloader = document.querySelector('.preloader')
 window.addEventListener('load', () => {
     preloader.classList.add('hide-preloader')
 })
+
+/* -----------
+                Carousels ----------- */
+
+const sliderHardware = document.querySelector(".slider-hardware");
+const sliderWeb = document.querySelector(".slider-web");
+const sliderAnalytics = document.querySelector(".slider-analytics");
