@@ -469,6 +469,8 @@ abbr, a {
     z-index: 10;
 }
 
+
+/* -------------  Carousel Projects Stylings -------------- */
 .hero-projects .projects-container .hardware-projects {
     height: calc(100% / 3);
     background: dodgerblue;
@@ -488,10 +490,14 @@ abbr, a {
     height: calc(100% / 2);
     background: dodgerblue;
 }
+
 .hero-skills .skills-container .nonTechnical-skills {
     height: calc(100% / 2);
     background: crimson;
 }
+
+/* -------------  End of Carousel Projects Stylings -------------- */
+
 
 @property --a {
     syntax: '<angle>';

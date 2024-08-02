@@ -286,8 +286,34 @@ window.addEventListener('load', () => {
 })
 
 /* -----------
-                Carousels ----------- */
+                  Carousels   
+                                ----------- */
 
 const sliderHardware = document.querySelector(".slider-hardware");
 const sliderWeb = document.querySelector(".slider-web");
 const sliderAnalytics = document.querySelector(".slider-analytics");
+const sliderTechnicalSkils = document.querySelector(".technical-skills");
+const sliderNonTechnicalSkils = document.querySelector(".nonTechnical-skills");
+
+const dataHardware = [
+    {
+        id: 1,
+        name: "Obstacle Avoidance Bot",
+        date: "17=08=2023",
+        desc: "The obstacle avoidance bot is my first Arduino project. It is a simple bot designed in a way to avoid any obstacles and chose a path filled with none or minimum. It makes use of Arduino Uno board, an ultrasonic sensor mounted on a servo mortor at the front, and two mortors. I wrote the code by myself with some help from resources from the internet.",
+        video: "",
+        img: ""
+    },
+
+    {
+        id: 2,
+        name: "Line Tracker",
+        date: "12-06-2024",
+        desc: "This is my second project using Arduino Uno board. It moves along the path covered with a black tape. It makes use of 2 Infrared sensors to find the black track and follows it. Here I used the drv8833 driver module and 2 mortors."
+    },
+
+];
+
+const dataWeb = [
+    
+]
