@@ -315,5 +315,8 @@ const dataHardware = [
 ];
 
 const dataWeb = [
-    
+    {
+        id: 1,
+        name: ""
+    }
 ]
