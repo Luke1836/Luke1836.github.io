@@ -302,14 +302,16 @@ const dataHardware = [
         date: "17=08=2023",
         desc: "The obstacle avoidance bot is my first Arduino project. It is a simple bot designed in a way to avoid any obstacles and chose a path filled with none or minimum. It makes use of Arduino Uno board, an ultrasonic sensor mounted on a servo mortor at the front, and two mortors. I wrote the code by myself with some help from resources from the internet.",
         video: "",
-        img: ""
+        img: "./Sources/Projects/Obstacle avoidance bot_edited.jpg"
     },
 
     {
         id: 2,
         name: "Line Tracker",
         date: "12-06-2024",
-        desc: "This is my second project using Arduino Uno board. It moves along the path covered with a black tape. It makes use of 2 Infrared sensors to find the black track and follows it. Here I used the drv8833 driver module and 2 mortors."
+        desc: "This is my second project using Arduino Uno board. It moves along the path covered with a black tape. It makes use of 2 Infrared sensors to find the black track and follows it. Here I used the drv8833 driver module and 2 mortors.",
+        video: "",
+        img: "./Sources/Projects/Line tracker_edited.jpg"
     },
 
 ];
@@ -319,4 +321,54 @@ const dataWeb = [
         id: 1,
         name: ""
     }
-]
+];
+
+
+function displaySlideIcon(cards) {
+    const IconHTML = cards.map((item) => `<div class="slide-icons"></div>`).join('');
+    return IconHTML;
+}
+
+
+function displayCard(cards) {
+    let card = cards.map((item)=>{
+      return `<div class="slide inactive">
+                <img src=${item.img} alt=${item.name} class="card-img">
+                <div class="info">
+                  <h2>${item.name}</h2>
+                  <p>${item.desc}</p>
+                </div>
+              </div>`;
+    });
+    card.push(`<div class="navigation-visibility"></div>`);
+    card = card.join('');  //Joins all the strings together to form one large string
+    container.innerHTML = card;
+
+    const iconsContainer = document.querySelector('.navigation-visibility'); 
+    iconsContainer.innerHTML = displaySlideIcon(cards);
+    container.innerHTML += `<div class="navigation">
+                                <i class="fas fa-chevron-left prev-btn"></i>
+                                <i class="fas fa-chevron-right next-btn"></i>
+                            </div>`;
+
+    // Add event listeners after elements are rendered
+    addEventListeners();
+    repeater();
+}
+
+
+function addEventListeners() {
+    const nextBtn = document.querySelector('.next-btn');
+    const prevBtn = document.querySelector('.prev-btn');
+    const slides = document.querySelectorAll('.slides');
+    const slideIcons = document.querySelectorAll('.slide-icons');
+
+    let currentSlide = 0;
+    let numSlides = slides.length;
+
+    slides[currentSlide].classList.add("active");
+    slideIcons[currentSlide].classList.add("active");
+    slides[currentSlide].classList.remove("inactive");
+    
+    
+}
