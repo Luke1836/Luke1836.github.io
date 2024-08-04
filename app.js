@@ -302,7 +302,7 @@ const dataHardware = [
         date: "17=08=2023",
         desc: "The obstacle avoidance bot is my first Arduino project. It is a simple bot designed in a way to avoid any obstacles and chose a path filled with none or minimum. It makes use of Arduino Uno board, an ultrasonic sensor mounted on a servo mortor at the front, and two mortors. I wrote the code by myself with some help from resources from the internet.",
         video: "",
-        img: "./Sources/Projects/Obstacle avoidance bot_edited.jpg"
+        img: "./Sources/Projects/Obstacle-avoidance.png"
     },
 
     {
@@ -311,7 +311,7 @@ const dataHardware = [
         date: "12-06-2024",
         desc: "This is my second project using Arduino Uno board. It moves along the path covered with a black tape. It makes use of 2 Infrared sensors to find the black track and follows it. Here I used the drv8833 driver module and 2 mortors.",
         video: "",
-        img: "./Sources/Projects/Line tracker_edited.jpg"
+        img: "./Sources/Projects/Line-tracker.png"
     },
 
 ];
@@ -325,12 +325,12 @@ const dataWeb = [
 
 
 function displaySlideIcon(cards) {
-    const IconHTML = cards.map((item) => `<div class="slide-icons"></div>`).join('');
+    const IconHTML = cards.map(() => `<div class="slide-icons"></div>`).join('');
     return IconHTML;
 }
 
 
-function displayCard(cards) {
+function displayCard(cards, container) {
     let card = cards.map((item)=>{
       return `<div class="slide inactive">
                 <img src=${item.img} alt=${item.name} class="card-img">
@@ -347,20 +347,20 @@ function displayCard(cards) {
     const iconsContainer = document.querySelector('.navigation-visibility'); 
     iconsContainer.innerHTML = displaySlideIcon(cards);
     container.innerHTML += `<div class="navigation">
-                                <i class="fas fa-chevron-left prev-btn"></i>
-                                <i class="fas fa-chevron-right next-btn"></i>
+                                <i class="fa-solid fa-chevron-left prev-btn"></i>
+                                <i class="fa-solid fa-chevron-right next-btn"></i>
                             </div>`;
 
     // Add event listeners after elements are rendered
-    addEventListeners();
+    addEventListeners(container);
     repeater();
 }
 
 
-function addEventListeners() {
+function addEventListeners(container) {
     const nextBtn = document.querySelector('.next-btn');
     const prevBtn = document.querySelector('.prev-btn');
-    const slides = document.querySelectorAll('.slides');
+    const slides = document.querySelectorAll('.slide');
     const slideIcons = document.querySelectorAll('.slide-icons');
 
     let currentSlide = 0;
@@ -370,5 +370,82 @@ function addEventListeners() {
     slideIcons[currentSlide].classList.add("active");
     slides[currentSlide].classList.remove("inactive");
     
+    nextBtn.addEventListener('click', () => {
+        slides.forEach((slide) => {
+          slide.classList.remove('active');
+          slide.classList.add('inactive');
+        });
     
+        slideIcons.forEach((slideIcon) => {
+          slideIcon.classList.remove('active');
+        });
+    
+        currentSlide++;
+    
+        if(currentSlide > (numSlides - 1))
+          currentSlide = 0;
+    
+        slides[currentSlide].classList.add('active');
+        slideIcons[currentSlide].classList.add('active');
+        slides[currentSlide].classList.remove('inactive');
+      });
+    
+    
+      prevBtn.addEventListener('click', () => {
+        slides.forEach((slide) => {
+          slide.classList.remove('active');
+          slide.classList.add('inactive');
+        });
+    
+        slideIcons.forEach((slideIcon) => {
+          slideIcon.classList.remove('active');
+        });
+    
+        currentSlide--;
+    
+        if(currentSlide < 0)
+          currentSlide = numSlides - 1;
+    
+        slides[currentSlide].classList.add('active');
+        slideIcons[currentSlide].classList.add('active');
+        slides[currentSlide].classList.remove('inactive');
+      });
+
+      container.addEventListener('mouseover', () => {
+        clearInterval(playSlider);
+      });
+    
+      container.addEventListener('mouseout', () => {
+        repeater();
+      });
 }
+
+function repeater() {
+    const slides = document.querySelectorAll('.slide');
+    const slideIcons = document.querySelectorAll('.slide-icon');
+    let currentSlide = 0;
+    const numSlides = slides.length;
+    
+    playSlider = setInterval(() => {
+      slides.forEach((slide) => {
+        slide.classList.remove('active');
+        slide.classList.add('inactive');
+      });
+  
+      slideIcons.forEach((slideIcon) => {
+        slideIcon.classList.remove('active');
+      });
+  
+      currentSlide++;
+  
+      if(currentSlide > (numSlides - 1))
+        currentSlide = 0;
+  
+      slides[currentSlide].classList.add('active');
+      slideIcons[currentSlide].classList.add('active');
+      slides[currentSlide].classList.remove('inactive');
+    }, 3000);
+  }
+
+//Rendering the hardware carousels
+displayCard(dataHardware, sliderHardware);

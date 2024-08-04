@@ -294,7 +294,7 @@ abbr, a {
     .projects-container {
         width: 70%;
         background-color: var(--bgcolor-contrast);
-        filter: contrast(4);
+        filter: contrast(1);
         color: white;
     }
 }
@@ -332,7 +332,6 @@ abbr, a {
     .skills-container {
         width: 70%;
         background-color: var(--bgcolor-contrast);
-        filter: contrast(4);
         color: white;
     }
 }
@@ -470,21 +469,121 @@ abbr, a {
 }
 
 
+
 /* -------------  Carousel Projects Stylings -------------- */
+
+.slider-hardware, .slider-web, .slider-analytics {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.card-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: contrast(2);
+}
+
+.slide .info {
+    position: absolute;
+    color: #EEE;
+    background-color: rgba(0,0,0,0.35);
+    width: 70%;
+    margin-top: 50px;
+    margin-left: 60px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 25px rgba(244, 244, 244, 0.05);
+}
+
+.slide .info h2 {
+    font-size: 1.75rem;
+    padding: 0 0.5rem;
+    text-transform: capitalize;
+}
+
+.slide .info p {
+    font-size: 0.75rem;
+    padding: 0 0.5rem;
+} 
+
+.navigation {
+    height: inherit;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+.slider-hardware:hover .navigation {
+    opacity: 1;
+}
+
+.navigation-visibility {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+}
+
+.navigation-visibility .slide-icons{
+    background-color: rgba(255,255,255,0.5);
+    width: 20px;
+    height: 10px;
+    transform: translateY(-50px);
+    margin: 0 6px;
+    border-radius: 4px;
+    box-shadow: 0px 5px 25px rgb(1 1 1 / 20%);
+}
+
+.navigation-visibility .active {
+    transition: background-color 0.8s;
+    background-color: rgb(249, 25, 0);
+}
+
+.navigation .prev-btn, .navigation .next-btn {
+    font-size: 2rem;
+    z-index: 999;
+    color: #161616;
+    padding: 0.45rem;
+    background-color: rgba(255,255,255,0.75);
+    cursor: pointer;
+}
+
+.navigation .prev-btn {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.navigation .next-btn {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+
 .hero-projects .projects-container .hardware-projects {
-    height: calc(100% / 3);
-    background: dodgerblue;
+    height: calc(100% / 2);
+    background: grey;
 }
 
 .hero-projects .projects-container .web-projects {
-    height: calc(100% / 3);
+    height: calc(100% / 2);
     background: crimson;
 }
 
-.hero-projects .projects-container .dataAnalytics-projects {
-    height: calc(100% / 3);
-    background: violet;
-}
 
 .hero-skills .skills-container .technical-skills {
     height: calc(100% / 2);
@@ -497,6 +596,24 @@ abbr, a {
 }
 
 /* -------------  End of Carousel Projects Stylings -------------- */
+
+/* ---------- 
+                Slide Transitions 
+                                    ---------- */
+
+    .slider-hardware .inactive {
+        clip-path: circle(0% at 0 50%);
+    }
+                                        
+    .slider-hardware .active {
+        clip-path: circle(150% at 0 50%);
+        transition: clip-path 0.8s ease-in;
+    }
+
+/* ---------- 
+               End of Slide Transitions 
+                                         ---------- */
+
 
 
 @property --a {
