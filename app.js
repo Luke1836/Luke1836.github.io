@@ -422,7 +422,7 @@ function addEventListeners(container) {
 
 function repeater() {
     const slides = document.querySelectorAll('.slide');
-    const slideIcons = document.querySelectorAll('.slide-icon');
+    const slideIcons = document.querySelectorAll('.slide-icons');
     let currentSlide = 0;
     const numSlides = slides.length;
     
