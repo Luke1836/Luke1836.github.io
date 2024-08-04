@@ -784,6 +784,13 @@ abbr, a {
         .skills-header {
             padding: 2rem;
             width: 100%;
+            order: 1;
+        }
+
+        .skills-container {
+            height: 94vh;
+            width: 100%;
+            order: 2;
         }
     }
 
@@ -812,6 +819,16 @@ abbr, a {
             padding: 2rem;
             width: 100%;
         }
+
+        .projects-container {
+            width: 100%;
+            height: 94vh;
+
+            .slide .info {
+                background-color: rgba(0,0,0,0.5);
+                font-size: 1rem;
+            }
+        }
     }
 
     .hero-skills {
@@ -820,6 +837,13 @@ abbr, a {
         .skills-header {
             padding: 2rem;
             width: 100%;
+            order: 1;
+        }
+
+        .skills-container {
+            height: 94vh;
+            width: 100%;
+            order: 2;
         }
     }
 }
@@ -866,6 +890,16 @@ abbr, a {
             padding: 2rem;
             width: 100%;
         }
+
+        .projects-container {
+            width: 100%;
+            height: 94vh;
+
+            .slide .info {
+                background-color: rgba(0,0,0,0.5);
+                font-size: 1rem;
+            }
+        }
     }
 
     .hero-skills {
@@ -874,6 +908,13 @@ abbr, a {
         .skills-header {
             padding: 2rem;
             width: 100%;
+            order: 1;
+        }
+
+        .skills-container {
+            height: 94vh;
+            width: 100%;
+            order: 2;
         }
     }
     
