@@ -290,8 +290,7 @@ window.addEventListener('load', () => {
                                 ----------- */
 
 const sliderHardware = document.querySelector(".slider-hardware");
-const sliderWeb = document.querySelector(".slider-web");
-const sliderAnalytics = document.querySelector(".slider-analytics");
+const sliderWeb = document.querySelector(".slider-software");
 const sliderTechnicalSkils = document.querySelector(".technical-skills");
 const sliderNonTechnicalSkils = document.querySelector(".nonTechnical-skills");
 
@@ -361,7 +360,7 @@ const dataWeb = [
         id: 6,
         name: "Tenzies",
         desc: "A simple game made from React. Please do try it out!",
-        img: "./Sources/Tenzies.png",
+        img: "./Sources/Projects/Tenzies.png",
         url: "https://github.com/Luke1836/React_projects/tree/master/Project-5/vite-project"
     },
 
@@ -369,7 +368,7 @@ const dataWeb = [
         id: 7,
         name: "Carousels",
         desc: "This is a carousel that I have developed using HTML5, CSS3, and Vanilla Javascript. No external libraries are used.",
-        img: "./Sources/Carousel.png",
+        img: "./Sources/Projects/Carousel.png",
         url: "https://github.com/Luke1836/React_projects/tree/master/Project-3/vite-project"
     }
 ];
@@ -396,6 +395,32 @@ function displayCard(cards, container) {
     container.innerHTML = card;
 
     const iconsContainer = document.querySelector('.navigation-visibility'); 
+    iconsContainer.innerHTML = displaySlideIcon(cards);
+    container.innerHTML += `<div class="navigation">
+                                <i class="fa-solid fa-chevron-left prev-btn"></i>
+                                <i class="fa-solid fa-chevron-right next-btn"></i>
+                            </div>`;
+
+    // Add event listeners after elements are rendered
+    addEventListeners(container);
+    repeater();
+}
+
+function displayWebCard(cards, container) {
+    let card = cards.map((item)=>{
+      return `<div class="slide inactive">
+                <img src=${item.img} alt=${item.name} class="card-img">
+                <div class="info">
+                  <h2>${item.name}</h2>
+                  <p>${item.desc}</p>
+                </div>
+              </div>`;
+    });
+    card.push(`<div class="navigation-visibility-web"></div>`);
+    card = card.join('');  //Joins all the strings together to form one large string
+    container.innerHTML = card;
+
+    const iconsContainer = document.querySelector('.navigation-visibility-web'); 
     iconsContainer.innerHTML = displaySlideIcon(cards);
     container.innerHTML += `<div class="navigation">
                                 <i class="fa-solid fa-chevron-left prev-btn"></i>
@@ -500,4 +525,4 @@ function repeater() {
 
 //Rendering the hardware carousels
 displayCard(dataHardware, sliderHardware);
-displayCard(dataWeb, sliderWeb);
+displayWebCard(dataWeb, sliderWeb)
