@@ -319,7 +319,58 @@ const dataHardware = [
 const dataWeb = [
     {
         id: 1,
-        name: ""
+        name: "Website Model",
+        desc: "This is a website frame made from just HTML-5, CSS3, and Vanilla Javascript. No external libraries are used.",
+        img: "./Sources/Projects/Website-model.png",
+        url: "https://github.com/Luke1836/Scroll"
+    },
+
+    {
+        id: 2,
+        name: "Restaurent Menu",
+        desc: "This is a simple restaurent menu made from just HTML-5, CSS3, and Vanilla Javascript. No external libraries are used. Here the data is stored in json format and I used string literals as an alternative to components in React.js.",
+        img: "./Sources/Projects/Restaurent-menu.png",
+        url: "https://github.com/Luke1836/Menu-responsive"
+    },
+
+    {
+        id: 3,
+        name: "Taco Shop Menu",
+        desc: "I proudly present my first ever Web Development Project using HTML5 and CSS3. This project showcases my complete understanding of HTML and CSS.",
+        img: "./Sources/Projects/Taco-restaurent_website.png",
+        url: "https://github.com/Luke1836/LTS-webpage"
+    },
+
+    {
+        id: 4,
+        name: "Forms project",
+        desc: "This is a simple form that I created using React. It shows my understanding of states and other hooks.",
+        img: "./Sources/Projects/Forms.png",
+        url: "https://github.com/Luke1836/React_projects/tree/master/Forms-Project/vite-project"
+    },
+
+    {
+        id: 5,
+        name: "Meme Generator",
+        desc: "This is my very first React project. THe data is fed from an API and it generates the memes and we can add text to those meme pictures.",
+        img: "./Sources/Projects/Meme-generator.png",
+        url: "https://github.com/Luke1836/React_projects/tree/master/Project-3/vite-project"
+    }, 
+
+    {
+        id: 6,
+        name: "Tenzies",
+        desc: "A simple game made from React. Please do try it out!",
+        img: "./Sources/Tenzies.png",
+        url: "https://github.com/Luke1836/React_projects/tree/master/Project-5/vite-project"
+    },
+
+    {
+        id: 7,
+        name: "Carousels",
+        desc: "This is a carousel that I have developed using HTML5, CSS3, and Vanilla Javascript. No external libraries are used.",
+        img: "./Sources/Carousel.png",
+        url: "https://github.com/Luke1836/React_projects/tree/master/Project-3/vite-project"
     }
 ];
 
@@ -449,3 +500,4 @@ function repeater() {
 
 //Rendering the hardware carousels
 displayCard(dataHardware, sliderHardware);
+displayCard(dataWeb, sliderWeb);
