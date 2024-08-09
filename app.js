@@ -380,9 +380,9 @@ function displaySlideIcon(cards) {
 }
 
 
-function displayCard(cards, container) {
+function displayCard(cards, container, division, button) {
     let card = cards.map((item)=>{
-      return `<div class="slide inactive">
+      return `<div class="slide${division} inactive">
                 <img src=${item.img} alt=${item.name} class="card-img">
                 <div class="info">
                   <h2>${item.name}</h2>
@@ -390,53 +390,30 @@ function displayCard(cards, container) {
                 </div>
               </div>`;
     });
-    card.push(`<div class="navigation-visibility"></div>`);
+    card.push(`<div class="navigation-visibility ${division}"></div>`);
     card = card.join('');  //Joins all the strings together to form one large string
     container.innerHTML = card;
 
-    const iconsContainer = document.querySelector('.navigation-visibility'); 
+    const iconsContainer = division ? document.querySelector(`.${division}`) : document.querySelector('.navigation-visibility');
+
+        
     iconsContainer.innerHTML = displaySlideIcon(cards);
-    container.innerHTML += `<div class="navigation">
-                                <i class="fa-solid fa-chevron-left prev-btn"></i>
-                                <i class="fa-solid fa-chevron-right next-btn"></i>
+    container.innerHTML += `<div class="${button ? 'navigation-web' : 'navigation'}">
+                                <i class="fa-solid fa-chevron-left ${button ? 'prev-btn-web' : 'prev-btn'}"></i>
+                                <i class="fa-solid fa-chevron-right ${button ? 'next-btn-web' : 'next-btn'}"></i>
                             </div>`;
-
     // Add event listeners after elements are rendered
-    addEventListeners(container);
-    repeater();
-}
-
-function displayWebCard(cards, container) {
-    let card = cards.map((item)=>{
-      return `<div class="slide inactive">
-                <img src=${item.img} alt=${item.name} class="card-img">
-                <div class="info">
-                  <h2>${item.name}</h2>
-                  <p>${item.desc}</p>
-                </div>
-              </div>`;
-    });
-    card.push(`<div class="navigation-visibility-web"></div>`);
-    card = card.join('');  //Joins all the strings together to form one large string
-    container.innerHTML = card;
-
-    const iconsContainer = document.querySelector('.navigation-visibility-web'); 
-    iconsContainer.innerHTML = displaySlideIcon(cards);
-    container.innerHTML += `<div class="navigation">
-                                <i class="fa-solid fa-chevron-left prev-btn"></i>
-                                <i class="fa-solid fa-chevron-right next-btn"></i>
-                            </div>`;
-
-    // Add event listeners after elements are rendered
-    addEventListeners(container);
+    addEventListeners(container, division, button);
     repeater();
 }
 
 
-function addEventListeners(container) {
-    const nextBtn = document.querySelector('.next-btn');
-    const prevBtn = document.querySelector('.prev-btn');
-    const slides = document.querySelectorAll('.slide');
+
+function addEventListeners(container, division, button) {
+    const nextBtn = document.querySelector(button ? '.next-btn-web' : '.next-btn');
+    const prevBtn = document.querySelector(button ? '.prev-btn-web' : '.prev-btn');
+    
+    const slides = document.querySelectorAll(division ? '.slide-web-div' : '.slide');
     const slideIcons = document.querySelectorAll('.slide-icons');
 
     let currentSlide = 0;
@@ -445,62 +422,64 @@ function addEventListeners(container) {
     slides[currentSlide].classList.add("active");
     slideIcons[currentSlide].classList.add("active");
     slides[currentSlide].classList.remove("inactive");
-    
+
+
     nextBtn.addEventListener('click', () => {
-        slides.forEach((slide) => {
-          slide.classList.remove('active');
-          slide.classList.add('inactive');
-        });
+            slides.forEach((slide) => {
+              slide.classList.remove('active');
+              slide.classList.add('inactive');
+            });
+        
+            slideIcons.forEach((slideIcon) => {
+              slideIcon.classList.remove('active');
+            });
+        
+            currentSlide++;
+        
+            if(currentSlide > (numSlides - 1))
+              currentSlide = 0;
+        
+            slides[currentSlide].classList.add('active');
+            slideIcons[currentSlide].classList.add('active');
+            slides[currentSlide].classList.remove('inactive');
+    });
+        
+        
+    prevBtn.addEventListener('click', () => {
+            slides.forEach((slide) => {
+              slide.classList.remove('active');
+              slide.classList.add('inactive');
+            });
+        
+            slideIcons.forEach((slideIcon) => {
+              slideIcon.classList.remove('active');
+            });
+        
+            currentSlide--;
+        
+            if(currentSlide < 0)
+              currentSlide = numSlides - 1;
+        
+            slides[currentSlide].classList.add('active');
+            slideIcons[currentSlide].classList.add('active');
+            slides[currentSlide].classList.remove('inactive');
+          });
     
-        slideIcons.forEach((slideIcon) => {
-          slideIcon.classList.remove('active');
-        });
-    
-        currentSlide++;
-    
-        if(currentSlide > (numSlides - 1))
-          currentSlide = 0;
-    
-        slides[currentSlide].classList.add('active');
-        slideIcons[currentSlide].classList.add('active');
-        slides[currentSlide].classList.remove('inactive');
-      });
-    
-    
-      prevBtn.addEventListener('click', () => {
-        slides.forEach((slide) => {
-          slide.classList.remove('active');
-          slide.classList.add('inactive');
-        });
-    
-        slideIcons.forEach((slideIcon) => {
-          slideIcon.classList.remove('active');
-        });
-    
-        currentSlide--;
-    
-        if(currentSlide < 0)
-          currentSlide = numSlides - 1;
-    
-        slides[currentSlide].classList.add('active');
-        slideIcons[currentSlide].classList.add('active');
-        slides[currentSlide].classList.remove('inactive');
-      });
-
-      container.addEventListener('mouseover', () => {
-        clearInterval(playSlider);
-      });
-    
-      container.addEventListener('mouseout', () => {
-        repeater();
-      });
+          container.addEventListener('mouseover', () => {
+            clearInterval(playSlider);
+          });
+        
+          container.addEventListener('mouseout', () => {
+            repeater(division);
+    });
 }
+    
 
-function repeater() {
-    const slides = document.querySelectorAll('.slide');
+function repeater(division) {
+    const slides = document.querySelectorAll(division ? '.slide-web-div' : '.slide');
     const slideIcons = document.querySelectorAll('.slide-icons');
     let currentSlide = 0;
-    const numSlides = slides.length;
+    let numSlides = slides.length;    
     
     playSlider = setInterval(() => {
       slides.forEach((slide) => {
@@ -524,5 +503,7 @@ function repeater() {
   }
 
 //Rendering the hardware carousels
-displayCard(dataHardware, sliderHardware);
-displayWebCard(dataWeb, sliderWeb)
+document.addEventListener('DOMContentLoaded', () => {
+    displayCard(dataHardware, sliderHardware, "", "");
+    displayCard(dataWeb, sliderWeb, "-web-div", "-web-btn");
+});

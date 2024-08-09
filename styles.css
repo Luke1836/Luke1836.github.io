@@ -480,9 +480,10 @@ abbr, a {
 
 .slider-software {
     filter: none;
+    border-top: 6px solid var(--project-heading-color);
 }
 
-.slide {
+.slide, .slide-web-div {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -499,7 +500,7 @@ abbr, a {
     background-color: rgba(0,0,0,0.35);
 }
 
-.slide .info {
+.slide .info, .slide-web-div .info {
     position: absolute;
     color: #EEE;
     background-color: rgba(0,0,0,0.35);
@@ -511,18 +512,18 @@ abbr, a {
     box-shadow: 0px 5px 25px rgba(244, 244, 244, 0.05);
 }
 
-.slide .info h2 {
+.slide .info h2, .slide-web-div .info h2 {
     font-size: 1.75rem;
     padding: 0 0.5rem;
     text-transform: capitalize;
 }
 
-.slide .info p {
+.slide .info p, .slide-web-div .info p {
     font-size: 0.85rem;
     padding: 0 0.5rem;
 } 
 
-.navigation {
+.navigation, .navigation-web {
     height: inherit;
     z-index: 10;
     display: flex;
@@ -532,11 +533,11 @@ abbr, a {
     transition: opacity 0.5s ease-in;
 }
 
-.slider-hardware:hover .navigation, .slider-software:hover .navigation {
+.slider-hardware:hover .navigation, .slider-software:hover .navigation-web {
     opacity: 1;
 }
 
-.navigation-visibility, .navigation-visibility-web {
+.navigation-visibility {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -545,7 +546,7 @@ abbr, a {
     transform: translateX(-50%);
 }
 
-.navigation-visibility .slide-icons, .navigation-visibility-web .slide-icons{
+.navigation-visibility .slide-icons {
     background-color: rgba(255,255,255,0.5);
     width: 20px;
     height: 10px;
@@ -555,12 +556,12 @@ abbr, a {
     box-shadow: 0px 5px 25px rgb(1 1 1 / 20%);
 }
 
-.navigation-visibility .active, .navigation-visibility-web .active {
+.navigation-visibility .active {
     transition: background-color 0.8s;
     background-color: rgb(249, 25, 0);
 }
 
-.navigation .prev-btn, .navigation .next-btn {
+.navigation .prev-btn, .navigation .next-btn, .navigation-web  .next-btn-web, .navigation-web  .prev-btn-web {
     font-size: 2rem;
     z-index: 999;
     color: #161616;
@@ -569,12 +570,12 @@ abbr, a {
     cursor: pointer;
 }
 
-.navigation .prev-btn {
+.navigation .prev-btn, .navigation-web .prev-btn-web {
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
 }
 
-.navigation .next-btn {
+.navigation .next-btn, .navigation-web .next-btn-web {
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
 }
