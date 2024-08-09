@@ -374,8 +374,8 @@ const dataWeb = [
 ];
 
 
-function displaySlideIcon(cards) {
-    const IconHTML = cards.map(() => `<div class="slide-icons"></div>`).join('');
+function displaySlideIcon(cards, division) {
+    let IconHTML = cards.map(() => `<div class="slide-icons${division}"></div>`).join('');
     return IconHTML;
 }
 
@@ -390,21 +390,21 @@ function displayCard(cards, container, division, button) {
                 </div>
               </div>`;
     });
-    card.push(`<div class="navigation-visibility ${division}"></div>`);
+    card.push(`<div class="navigation-visibility${division}"></div>`);
     card = card.join('');  //Joins all the strings together to form one large string
     container.innerHTML = card;
 
-    const iconsContainer = division ? document.querySelector(`.${division}`) : document.querySelector('.navigation-visibility');
+    const iconsContainer = division ? document.querySelector(`.navigation-visibility-web-div`) : document.querySelector('.navigation-visibility');
 
         
-    iconsContainer.innerHTML = displaySlideIcon(cards);
+    iconsContainer.innerHTML = displaySlideIcon(cards, division);
     container.innerHTML += `<div class="${button ? 'navigation-web' : 'navigation'}">
                                 <i class="fa-solid fa-chevron-left ${button ? 'prev-btn-web' : 'prev-btn'}"></i>
                                 <i class="fa-solid fa-chevron-right ${button ? 'next-btn-web' : 'next-btn'}"></i>
                             </div>`;
     // Add event listeners after elements are rendered
     addEventListeners(container, division, button);
-    repeater();
+    repeater(division);
 }
 
 
@@ -413,11 +413,13 @@ function addEventListeners(container, division, button) {
     const nextBtn = document.querySelector(button ? '.next-btn-web' : '.next-btn');
     const prevBtn = document.querySelector(button ? '.prev-btn-web' : '.prev-btn');
     
+    const slideIcons = document.querySelectorAll(division ? '.slide-icons-web-div' : '.slide-icons');
     const slides = document.querySelectorAll(division ? '.slide-web-div' : '.slide');
-    const slideIcons = document.querySelectorAll('.slide-icons');
+
 
     let currentSlide = 0;
     let numSlides = slides.length;
+    
 
     slides[currentSlide].classList.add("active");
     slideIcons[currentSlide].classList.add("active");
@@ -476,8 +478,9 @@ function addEventListeners(container, division, button) {
     
 
 function repeater(division) {
+    const slideIcons = document.querySelectorAll(division ? '.slide-icons-web-div' : '.slide-icons');
     const slides = document.querySelectorAll(division ? '.slide-web-div' : '.slide');
-    const slideIcons = document.querySelectorAll('.slide-icons');
+
     let currentSlide = 0;
     let numSlides = slides.length;    
     
