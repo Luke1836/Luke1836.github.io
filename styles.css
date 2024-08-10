@@ -643,9 +643,16 @@ abbr, a {
     row-gap: 1rem;
 }
 
+.hero-skills .skills-container .nonTechnical-skills:hover {
+    background-color: #3b7500;
+}
+
+.hero-skills .skills-container .nonTechnical-skills .list-items a{
+    color: whitesmoke;
+}
+
 .hero-skills .skills-container .technical-skills .list .list-items {
     font-size: var(--fs);
-    background-color: var(--box-color); 
     text-transform: capitalize;
 }
 
@@ -658,6 +665,7 @@ abbr, a {
 .hero-skills .skills-container .nonTechnical-skills {
     height: calc(100% / 2);
     border-top: 4px solid var(--bordercolor);
+    transition: background-color 0.5s ease-in-out;
 }
 
 .hero-skills .skills-container .nonTechnical-skills .icon-logo {
