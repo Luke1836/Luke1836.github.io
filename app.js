@@ -301,7 +301,7 @@ const dataHardware = [
         date: "17=08=2023",
         desc: "The obstacle avoidance bot is my first Arduino project. It is a simple bot designed in a way to avoid any obstacles and chose a path filled with none or minimum. It makes use of Arduino Uno board, an ultrasonic sensor mounted on a servo mortor at the front, and two mortors. I wrote the code by myself with some help from resources from the internet.",
         video: "",
-        img: "./Sources/Projects/Obstacle-avoidance.png"
+        img: "./Sources/Projects/Obstacle-avoidance.png",
     },
 
     {
@@ -321,7 +321,8 @@ const dataWeb = [
         name: "Website Model",
         desc: "This is a website frame made from just HTML-5, CSS3, and Vanilla Javascript. No external libraries are used.",
         img: "./Sources/Projects/Website-model.png",
-        url: "https://github.com/Luke1836/Scroll"
+        url: "https://github.com/Luke1836/Scroll",
+        site: ""
     },
 
     {
@@ -387,6 +388,8 @@ function displayCard(cards, container, division, button) {
                 <div class="info">
                   <h2>${item.name}</h2>
                   <p>${item.desc}</p>
+                  ${division !== null ? `<span>Check out the code: <a href="${item.url}">Visit Github</a></span>` : ''}
+                  ${division !== null ? `<span>Check out the site: <a href="${item.url}">Visit Site</a></span>` : ''}
                 </div>
               </div>`;
     });
