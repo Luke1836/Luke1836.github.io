@@ -291,8 +291,6 @@ window.addEventListener('load', () => {
 
 const sliderHardware = document.querySelector(".slider-hardware");
 const sliderWeb = document.querySelector(".slider-software");
-const sliderTechnicalSkils = document.querySelector(".technical-skills");
-const sliderNonTechnicalSkils = document.querySelector(".nonTechnical-skills");
 
 const dataHardware = [
     {
