@@ -36,6 +36,7 @@
     --fs-heading: 3.25rem;
     --fs-heading-sm: 1.5rem;
     --box-color: #2d2d39;
+    --link-color: #05fb9d;
 }
 
 /* GENERAL SYLES */
@@ -522,6 +523,22 @@ abbr, a {
     font-size: 0.85rem;
     padding: 0 0.5rem;
 } 
+
+#urls {
+    padding-left: 0.5rem;
+}
+
+#urls a {
+    color: var(--link-color);
+}
+
+#urls a:active {
+    color: var(--link-color);
+}
+
+#urls a:hover {
+    color: var(--fontcolor-primary2);
+}
 
 .navigation, .navigation-web {
     height: inherit;

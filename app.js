@@ -394,8 +394,8 @@ function displayCard(cards, container, division, button) {
                 <div class="info">
                   <h2>${item.name}</h2>
                   <p>${item.desc}</p>
-                  ${division !== null ? `<span>Check out the code: <a href="${item.url}">Visit Github</a></span>` : ''}
-                  ${division !== null ? `<span>Check out the site: <a href="${item.url}">Visit Site</a></span>` : ''}
+                  ${division !== "" ? `<span id="urls">Check out the code: <a href="${item.url}" target="_blank">Visit Github</a></span><br/>` : ''}
+                  ${division !== "" ? `<span id="urls">Check out the site: <a href="${item.site}" target="_blank">Visit Site</a></span>` : ''}
                 </div>
               </div>`;
     });
