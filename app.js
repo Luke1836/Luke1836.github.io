@@ -353,7 +353,7 @@ const dataWeb = [
     {
         id: 5,
         name: "Meme Generator",
-        desc: "This is my very first React project. THe data is fed from an API and it generates the memes and we can add text to those meme pictures.",
+        desc: "This is my very first React project. The data is fed from an API and it generates the memes and we can add text to those meme pictures.",
         img: "./Sources/Projects/Meme-generator.png",
         url: "https://github.com/Luke1836/React_projects/tree/master/Project-3/vite-project",
         site: "https://meme-generator-xi-one.vercel.app/"
