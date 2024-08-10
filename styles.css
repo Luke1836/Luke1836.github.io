@@ -556,10 +556,9 @@ abbr, a {
     box-shadow: 0px 5px 25px rgb(1 1 1 / 20%);
 }
 
-.navigation-visibility .slide-icons .active, .navigation-visibility-web-div .slide-icons-web-div .active {
+.navigation-visibility-web-div .active-icons, .navigation-visibility .active-icons {
     transition: background-color 0.8s;
     background-color: rgb(249, 25, 0);
-    visibility: visible;
 }
 
 .navigation .prev-btn, .navigation .next-btn, .navigation-web  .next-btn-web, .navigation-web  .prev-btn-web {

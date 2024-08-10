@@ -381,7 +381,7 @@ function displaySlideIcon(cards, division) {
 
 
 function displayCard(cards, container, division, button) {
-    let card = cards.map((item)=>{
+    let card = cards.map((item) => {
       return `<div class="slide${division} inactive">
                 <img src=${item.img} alt=${item.name} class="card-img">
                 <div class="info">
@@ -422,7 +422,7 @@ function addEventListeners(container, division, button) {
     
 
     slides[currentSlide].classList.add("active");
-    slideIcons[currentSlide].classList.add("active");
+    slideIcons[currentSlide].classList.add("active-icons");
     slides[currentSlide].classList.remove("inactive");
 
 
@@ -433,7 +433,7 @@ function addEventListeners(container, division, button) {
             });
         
             slideIcons.forEach((slideIcon) => {
-              slideIcon.classList.remove('active');
+              slideIcon.classList.remove('active-icons');
             });
         
             currentSlide++;
@@ -442,7 +442,7 @@ function addEventListeners(container, division, button) {
               currentSlide = 0;
         
             slides[currentSlide].classList.add('active');
-            slideIcons[currentSlide].classList.add('active');
+            slideIcons[currentSlide].classList.add('active-icons');
             slides[currentSlide].classList.remove('inactive');
     });
         
@@ -454,7 +454,7 @@ function addEventListeners(container, division, button) {
             });
         
             slideIcons.forEach((slideIcon) => {
-              slideIcon.classList.remove('active');
+              slideIcon.classList.remove('active-icons');
             });
         
             currentSlide--;
@@ -463,7 +463,7 @@ function addEventListeners(container, division, button) {
               currentSlide = numSlides - 1;
         
             slides[currentSlide].classList.add('active');
-            slideIcons[currentSlide].classList.add('active');
+            slideIcons[currentSlide].classList.add('active-icons');
             slides[currentSlide].classList.remove('inactive');
           });
     
@@ -491,7 +491,7 @@ function repeater(division) {
       });
   
       slideIcons.forEach((slideIcon) => {
-        slideIcon.classList.remove('active');
+        slideIcon.classList.remove('active-icons');
       });
   
       currentSlide++;
@@ -500,7 +500,7 @@ function repeater(division) {
         currentSlide = 0;
   
       slides[currentSlide].classList.add('active');
-      slideIcons[currentSlide].classList.add('active');
+      slideIcons[currentSlide].classList.add('active-icons');
       slides[currentSlide].classList.remove('inactive');
     }, 3000);
   }
