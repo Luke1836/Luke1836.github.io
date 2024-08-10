@@ -322,7 +322,7 @@ const dataWeb = [
         desc: "This is a website frame made from just HTML-5, CSS3, and Vanilla Javascript. No external libraries are used.",
         img: "./Sources/Projects/Website-model.png",
         url: "https://github.com/Luke1836/Scroll",
-        site: ""
+        site: "https://scroll-website-wine.vercel.app/"
     },
 
     {
@@ -330,7 +330,8 @@ const dataWeb = [
         name: "Restaurent Menu",
         desc: "This is a simple restaurent menu made from just HTML-5, CSS3, and Vanilla Javascript. No external libraries are used. Here the data is stored in json format and I used string literals as an alternative to components in React.js.",
         img: "./Sources/Projects/Restaurent-menu.png",
-        url: "https://github.com/Luke1836/Menu-responsive"
+        url: "https://github.com/Luke1836/Menu-responsive",
+        site: "https://restaurent-menu-kappa.vercel.app/"
     },
 
     {
@@ -338,7 +339,8 @@ const dataWeb = [
         name: "Taco Shop Menu",
         desc: "I proudly present my first ever Web Development Project using HTML5 and CSS3. This project showcases my complete understanding of HTML and CSS.",
         img: "./Sources/Projects/Taco-restaurent_website.png",
-        url: "https://github.com/Luke1836/LTS-webpage"
+        url: "https://github.com/Luke1836/LTS-webpage",
+        site: "https://lts-webpage.vercel.app/"
     },
 
     {
@@ -346,7 +348,8 @@ const dataWeb = [
         name: "Forms project",
         desc: "This is a simple form that I created using React. It shows my understanding of states and other hooks.",
         img: "./Sources/Projects/Forms.png",
-        url: "https://github.com/Luke1836/React_projects/tree/master/Forms-Project/vite-project"
+        url: "https://github.com/Luke1836/React_projects/tree/master/Forms-Project/vite-project",
+        site: "https://react-projects-rosy.vercel.app/"
     },
 
     {
@@ -354,7 +357,8 @@ const dataWeb = [
         name: "Meme Generator",
         desc: "This is my very first React project. THe data is fed from an API and it generates the memes and we can add text to those meme pictures.",
         img: "./Sources/Projects/Meme-generator.png",
-        url: "https://github.com/Luke1836/React_projects/tree/master/Project-3/vite-project"
+        url: "https://github.com/Luke1836/React_projects/tree/master/Project-3/vite-project",
+        site: "https://meme-generator-xi-one.vercel.app/"
     }, 
 
     {
@@ -362,7 +366,8 @@ const dataWeb = [
         name: "Tenzies",
         desc: "A simple game made from React. Please do try it out!",
         img: "./Sources/Projects/Tenzies.png",
-        url: "https://github.com/Luke1836/React_projects/tree/master/Project-5/vite-project"
+        url: "https://github.com/Luke1836/React_projects/tree/master/Project-5/vite-project",
+        site: "https://tenzies-beta-tan.vercel.app/"
     },
 
     {
@@ -370,7 +375,8 @@ const dataWeb = [
         name: "Carousels",
         desc: "This is a carousel that I have developed using HTML5, CSS3, and Vanilla Javascript. No external libraries are used.",
         img: "./Sources/Projects/Carousel.png",
-        url: "https://github.com/Luke1836/React_projects/tree/master/Project-3/vite-project"
+        url: "https://github.com/Luke1836/React_projects/tree/master/Project-3/vite-project",
+        site: "https://carousel-azure-seven.vercel.app/"
     }
 ];
 
