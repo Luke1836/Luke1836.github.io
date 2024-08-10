@@ -618,7 +618,7 @@ abbr, a {
     background-color: #007573;
 }
 
-.hero-skills .skills-container .technical-skills {
+.hero-skills .skills-container .technical-skills, .nonTechnical-skills {
     height: calc(100% / 2);
     display: flex;
     flex-flow: column nowrap;
@@ -633,6 +633,14 @@ abbr, a {
     display: flex;
     flex-flow: row wrap;
     column-gap: 1rem;
+    padding-left: 0.5rem;
+    margin-left: 2rem;
+}
+
+.hero-skills .skills-container .nonTechnical-skills .list {
+    display: flex;
+    flex-flow: column wrap;
+    row-gap: 1rem;
 }
 
 .hero-skills .skills-container .technical-skills .list .list-items {
@@ -641,10 +649,6 @@ abbr, a {
     text-transform: capitalize;
 }
 
-.hero-skills .skills-container .technical-skills .list {
-    padding-left: 0.5rem;
-    margin-left: 2rem;
-}
 
 .hero-skills .skills-container .technical-skills .icon-logo {
     background-color: var(--skill-heading-color);
@@ -653,9 +657,13 @@ abbr, a {
 
 .hero-skills .skills-container .nonTechnical-skills {
     height: calc(100% / 2);
-    background: crimson;
+    border-top: 4px solid var(--bordercolor);
 }
 
+.hero-skills .skills-container .nonTechnical-skills .icon-logo {
+   background-color: rgb(16, 129, 163);
+   padding: 0 0.25rem;
+}
 /* -------------  End of Carousel Projects Stylings -------------- */
 
 /* ---------- 
