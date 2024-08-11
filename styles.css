@@ -654,23 +654,9 @@ abbr, a {
     .anim, .anim1 {
         border-bottom: 2px dotted var(--bordercolor);
     }
-
-    .skill-div {
-        margin: 0;
-        width: 100%;
-    }
-
-    .skills {
-        width: 150px;
-        height: 120px;
-    }
-
-    .skills::after {
-        inset: 3px;
-    }
     
     .blur-div {
-        width: 300px;
+        width: 310px;
         height: 200px;
         transform: translate(-50%, -50%) skew(-12deg, -6deg);
         opacity: 0.65;
