@@ -14,6 +14,7 @@ const endRadius = Math.min(centerX, centerY);
 
 const gradient = ctx.createRadialGradient(centerX, centerY, startRadius, centerX, centerY, endRadius); */
 
+
 const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
 gradient.addColorStop(0, '#7469B6');
 gradient.addColorStop(0.4, '#874CCC');
@@ -224,7 +225,7 @@ function animate()
 animate();
 
 
-/* -----------TEXT ANIMATION----------- */
+/* ----------- TEXT ANIMATION ----------- */
 const alpahbets = "ABCDEFGHIJKLMNOPQRSTUVWXY";
 let interval = null;
 const text = document.querySelectorAll('.anim');
@@ -278,12 +279,17 @@ const observer = new IntersectionObserver((entries) => {
 
 intersect.forEach((ele) => observer.observe(ele));
 
+/* ----------- End of Section Animations -----------*/
+
 
 /* ----------- Adding Preloader Animations -----------*/
 const preloader = document.querySelector('.preloader')
 window.addEventListener('load', () => {
     preloader.classList.add('hide-preloader')
 })
+
+/* ----------- End of Preloader Animations -----------*/
+
 
 /* -----------
                   Carousels   
@@ -483,7 +489,7 @@ function addEventListeners(container, division, button) {
     });
 }
     
-
+//Auto-slider, repeating after 5s
 function repeater(division) {
     const slideIcons = document.querySelectorAll(division ? '.slide-icons-web-div' : '.slide-icons');
     const slides = document.querySelectorAll(division ? '.slide-web-div' : '.slide');
