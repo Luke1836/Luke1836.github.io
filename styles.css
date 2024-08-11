@@ -878,10 +878,6 @@ abbr, a {
     .footer {
         height: 25vh;
     }
-
-    .Skill-header {
-        top: 2.4%;
-    }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1500px) {
@@ -904,22 +900,6 @@ abbr, a {
         padding: 0.5rem;
     }
 
-    .Skill-header {
-        position: absolute;
-        top: 6.5%;
-    }
-
-    .skill-div {
-        margin: 0;
-        width: 100%;
-    }
-
-    .skills {
-        width: 160px;
-        height: 80px;
-        font-size: 1rem;
-    }
-
     .hero-container {
         header {
             width: 100%;
@@ -929,18 +909,7 @@ abbr, a {
     }
 }
 
-@media screen and (max-height: 700px) and (max-width: 680px)  {
-    .skill-div {
-        margin: 0;
-        width: 100%;
-        font-size: 0.25rem;
-    }
-
-    .skills {
-        width: 120px;
-        height: 80px;
-    }
-
+@media screen and (max-height: 700px) and (max-width: 680px) {
     .details {
         display: flex;
         flex-flow: column nowrap;
