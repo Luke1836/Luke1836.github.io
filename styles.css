@@ -664,10 +664,6 @@ abbr, a {
         border-radius: 10px;
     }
 
-    #image-container::after {
-        height: 80px;
-    }
-
     .details {
         display: flex;
         flex-flow: column nowrap;
@@ -791,25 +787,6 @@ abbr, a {
         padding: 0.75rem;
     }
 
-    .Skill-header {
-        position: absolute;
-        top: 3%;
-    }
-
-    .anim, .anim1 {
-        border-bottom: 2px dotted var(--bordercolor);
-    }
-
-    .skill-div {
-        margin: 0;
-        width: 100%;
-    }
-
-    .skills {
-        width: 240px;
-        height: 150px;
-    }
-
     .details {
         display: flex;
         flex-flow: column nowrap;
@@ -872,11 +849,6 @@ abbr, a {
     .hero-1 {
         font-size: 2.75rem;
         padding: 1rem;
-    }
-
-    .Skill-header {
-        position: absolute;
-        top: 2.8%;
     }
 
     .anim, .anim1 {
