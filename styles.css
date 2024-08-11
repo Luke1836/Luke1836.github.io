@@ -24,6 +24,7 @@
     --fontcolor-primary2: #0FC2C0;
     --fontcolor-primary4: #008684;
     --fontcolor-primary3: #EEE;
+    --fontcolor-primary5: white;
     --headerbgcolor: #0a1321;
     --bordercolor2: #08161b69;
     --bordercolor: #006597;
@@ -115,7 +116,7 @@ abbr, a {
     visibility: visible;
     width: 100%;
     min-height: 100vh;
-    background-color: white;
+    background-color: var(--fontcolor-primary5);
     z-index: 10000;
     position: absolute;
 }
@@ -296,7 +297,7 @@ abbr, a {
     .projects-container {
         width: 70%;
         background-color: var(--bgcolor-contrast);
-        color: white;
+        color: var(--fontcolor-primary5);
         filter: contrast(2);
     }
 }
@@ -334,7 +335,7 @@ abbr, a {
     .skills-container {
         width: 70%;
         background-color: var(--bgcolor-contrast);
-        color: white;
+        color: var(--fontcolor-primary5);
     }
 }
 
@@ -349,7 +350,7 @@ abbr, a {
 
 @keyframes surprise {
     0% {
-        color: #7469B6;
+        color: #4b6c8b;
     }
 
     20% {
@@ -361,7 +362,7 @@ abbr, a {
     }
 
     60% {
-        color: #00504e;
+        color: #006d49;
     }
 
     80% {
@@ -401,7 +402,7 @@ abbr, a {
 
 .slide .info, .slide-web-div .info {
     position: absolute;
-    color: #EEE;
+    color: var(--fontcolor-primary3);
     background-color: rgba(0,0,0,0.55);
     width: 70%;
     top: 40%;
@@ -644,11 +645,6 @@ abbr, a {
     .hero-1 {
         font-size: var(--fs-heading-sm);
         padding: 0.5rem;
-    }
-
-    .Skill-header {
-        position: absolute;
-        top: 2.25%;
     }
 
     .anim, .anim1 {
