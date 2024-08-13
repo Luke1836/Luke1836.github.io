@@ -547,6 +547,10 @@ abbr, a {
     background-color: #3b7500;
 }
 
+.hero-skills .skills-container .technical-skills .list-heading {
+    margin-left: 0.5rem;
+}
+
 .hero-skills .skills-container .nonTechnical-skills .list-items a{
     color: whitesmoke;
 }
@@ -721,6 +725,10 @@ abbr, a {
         font-size: 1rem;
         padding: 0.25rem;
         margin-inline-end: 0;
+    }
+
+    .hero-skills .skills-container .technical-skills .list-heading {
+        font-size: 1.65rem;
     }
 }
 
