@@ -332,7 +332,7 @@ const dataWeb = [
     {
         id: 2,
         name: "Restaurent Menu",
-        desc: "This is a simple restaurent menu made from just HTML-5, CSS3, and Vanilla Javascript. No external libraries are used. Here the data is stored in json format and I used string literals as an alternative to components in React.js.",
+        desc: "This is a simple restaurent menu made from just HTML-5, CSS3, and Vanilla Javascript. No external libraries are used. I used string literals as an alternative to components in React.js.",
         img: "./Sources/Projects/Restaurent-menu.png",
         url: "https://github.com/Luke1836/Menu-responsive",
         site: "https://restaurent-menu-kappa.vercel.app/"

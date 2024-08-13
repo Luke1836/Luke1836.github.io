@@ -426,6 +426,7 @@ abbr, a {
 
 #urls {
     padding-left: 0.5rem;
+    white-space: nowrap;    
 }
 
 #urls a {
@@ -729,6 +730,11 @@ abbr, a {
 
     .hero-skills .skills-container .technical-skills .list-heading {
         font-size: 1.65rem;
+    }
+
+    #urls {
+        font-size: 0.75rem;
+        font-weight: 500;
     }
 }
 
