@@ -339,7 +339,7 @@ const dataWeb = [
     },
 
     {
-        id: 4,
+        id: 3,
         name: "Forms project",
         desc: "This is a simple form that I created using React. It shows my understanding of states and other hooks.",
         img: "./Sources/Projects/Forms.png",
@@ -348,7 +348,7 @@ const dataWeb = [
     },
 
     {
-        id: 5,
+        id: 4,
         name: "Meme Generator",
         desc: "This is my very first React project. The data is fed from an API and it generates the memes and we can add text to those meme pictures.",
         img: "./Sources/Projects/Meme-generator.png",
@@ -357,7 +357,7 @@ const dataWeb = [
     }, 
 
     {
-        id: 6,
+        id: 5,
         name: "Tenzies",
         desc: "A simple game made from React. Please do try it out!",
         img: "./Sources/Projects/Tenzies.png",
@@ -366,7 +366,7 @@ const dataWeb = [
     },
 
     {
-        id: 7,
+        id: 6,
         name: "Carousels",
         desc: "This is a carousel that I have developed using HTML5, CSS3, and Vanilla Javascript. No external libraries are used.",
         img: "./Sources/Projects/Carousel.png",
