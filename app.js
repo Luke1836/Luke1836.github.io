@@ -339,15 +339,6 @@ const dataWeb = [
     },
 
     {
-        id: 3,
-        name: "Taco Shop Menu",
-        desc: "I proudly present my first ever Web Development Project using HTML5 and CSS3. This project showcases my complete understanding of HTML and CSS.",
-        img: "./Sources/Projects/Taco-restaurent_website.png",
-        url: "https://github.com/Luke1836/LTS-webpage",
-        site: "https://lts-webpage.vercel.app/"
-    },
-
-    {
         id: 4,
         name: "Forms project",
         desc: "This is a simple form that I created using React. It shows my understanding of states and other hooks.",
